@@ -3,15 +3,16 @@ html{
 }
 *, 
 *::after,
-*::before{
+*::before {
+    padding: 0;
+    margin: 0;
     box-sizing: inherit;
 }
-body{
-    font-size: 18px;
+body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.visually-hidden{
+.visually-hidden {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
     height: 1px;
@@ -22,8 +23,8 @@ body{
     position: absolute;
 }
 
-.container{
-    max-width: 1280px;
-    padding: 0 30px;
-    margin: auto;
+.container {
+    max-width: 1440px;
+    padding: 0 165px;
+    margin: 0 auto;
 }

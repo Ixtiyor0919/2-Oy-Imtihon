@@ -1,18 +1,15 @@
 .header {
-    background: url(../../images/header-desktop-background.png) no-repeat;
-    background-position: right;
-    background-size: contain;
     padding-bottom: 75px;
-    z-index: 10;
-    position: relative;
+    z-index: 6;
     &-img {
+        background: url(../../images/header-desktop-background.png) no-repeat;
+        background-position: right;
+        background-size: contain;
         width: 780px;
         height: 780px;
-        border-radius: 50%;
         position: absolute;
-        top: -20%;
+        top: -5%;
         right: 0;
-        display: none;
     }
     .navbar  {
         padding-top: 30px;
@@ -24,8 +21,8 @@
         right: 0;
         left: 0;
         background: #EDF3F8;
-        z-index: -10;
-        filter: drop-shadow(2px 4px 6px white);
+        z-index: -1;
+        filter: drop-shadow(2px 4px 6px rgba(129, 127, 127, 0.812));
     }
     &-logo {
         margin-right: 64px;
@@ -59,10 +56,6 @@
         margin-left: auto;
         box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
     }
-    &-iphone {
-        width: 44%;
-        transform: translate(15%, 40%);
-    }
     .hero {
         padding-top: 120px;
         display: flex;
@@ -70,7 +63,7 @@
         &-left {
             margin-right: auto;
             .hero-title {
-                width: 546px;
+                width: 520px;
                 font-family: 'DM Serif Display';
                 font-weight: 400;
                 font-size: 72px;
@@ -120,11 +113,121 @@
                 }
             }
         }
+        .hero-right {
+            transform: translate(15%, 40%);
+        }
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 376px) {
     .header {
+        padding-bottom: 50px;
+        .navbar {
+            filter: unset;
+            z-index: 10;
+        }
+        &-img {
+            background: url(../../images/header-media-background.png) no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: fixed;
+            z-index: 10;
+            top: -245px;
+        }
+        &-iphone {
+            width: unset;
+            transform: translate(10%, 75%);
+        }
+        .hero {
+            margin-top: -50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+            &-left {
+                margin: unset;
+                margin-top: 275px;
+                .hero-title {
+                    margin: 0 auto;
+                    font-size: 48px;
+                    line-height: 56px;
+                }
+                .form-wrapper {
+                    margin: 32px 0 16px 0;
+                }
+            }
+        }
+    }
+}
 
+@media screen and (max-width: 375px) {
+    .header {
+        &-img {
+            display: none;
+        }
+        .navbar {
+            z-index: 10;
+            .menu {
+                width: 28px;
+                height: 18px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                .toggle {
+                    margin: auto;
+                }
+                .toggle, .toggle::after, .toggle::before {
+                    content: "";
+                    width: 28px;
+                    height: 3px;
+                    border-radius: 3px;
+                    position: absolute;
+                    background: #36536B;
+                }
+                .toggle::before {
+                    top: 0;
+                }
+                .toggle::after {
+                    bottom: 0;
+                }
+            }
+        }
+       .nav-list, .nav-btn {
+            display: none;
+        }
+        &-iphone {
+            transform: unset;
+        }
+        .hero {
+            padding-top: unset;
+            margin: unset;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            overflow: hidden;
+            &-left {
+                text-align: center;
+                .hero-title {
+                    width: 100%;
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+                .form-wrapper {
+                    width: 100%;
+                    .form-input {
+                        width: inherit;
+                        display: block;
+                    }
+                    .form-button {
+                        width: inherit;
+                        margin-top: 16px;
+                        transform: unset;
+                    }
+                }
+            }
+            .hero-right {
+                transform: translate(10%, 20%);
+            }
+        }
     }
 }

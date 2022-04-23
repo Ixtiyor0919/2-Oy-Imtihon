@@ -28,3 +28,38 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) and (min-width: 376px) {
+    .implement {
+       padding-top: 50px;
+       padding-bottom: 50px;
+       flex-direction: column;
+       &-img {
+           width: 400px;
+           height: 250px;
+       }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .implement {
+       padding-top: 40px;
+       padding-bottom: 40px;
+       flex-direction: column;
+       &-img {
+           width: 330px;
+           height: 210px;
+       }
+       &-right {
+           text-align: center;
+           .implement-title {
+               width: 100%;
+                font-size: 36px;
+                line-height: 36px;
+           }
+           .implement-description {
+               width: 100%;
+           }
+       }
+    }
+}

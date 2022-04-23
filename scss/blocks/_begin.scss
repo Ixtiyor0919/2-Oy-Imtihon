@@ -11,7 +11,7 @@
         letter-spacing: -0.369231px;
         color: #36536B;
     }
-    .begin-wrapper {
+    &-wrapper {
         margin-left: auto;
         .begin-input {
             width: 445px;
@@ -30,6 +30,9 @@
             color: #36536B;
             opacity: 0.5;
             cursor: pointer;
+            &:active {
+                box-shadow: unset;
+            }
         }
         .begin-button {
             padding: 15px 25px;
@@ -37,8 +40,46 @@
             margin-left: auto;
             transform: translateY(-48px);
         }
-        .begin-input:active {
-            box-shadow: unset;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 376px) {
+    .begin {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        text-align: center;
+        &-title {
+            margin-bottom: 40px;
+        }
+        &-wrapper {
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .begin {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        flex-direction: column;
+        &-title {
+            font-size: 32px;
+            line-height: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        &-wrapper {
+            width: 100%;
+            margin-right: auto;
+            .begin-input {
+                width: inherit;
+            }
+            .begin-button {
+                width: inherit;
+                margin-top: 16px;
+                transform: unset;
+            }
         }
     }
 }

@@ -1,0 +1,64 @@
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    background: url(../../images/desktop-about-background.png) no-repeat;
+    background-position: left;
+    background-size: contain;
+    background: #1B262F;
+    &-pavigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .about-text {
+            .about-title {
+                font-family: 'DM Serif Display';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -0.369231px;
+                color: #FBFCFE;
+            }
+            .about-description {
+                width: 430px;
+                margin: 24px 0 32px 0;
+                font-family: 'Public Sans';
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 28px;
+                color: #FBFCFE;
+                opacity: 0.7;
+            }
+            .about-link {   
+                padding: 16px 32px;
+                font-family: 'Public Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 18px;
+                text-align: center;
+                letter-spacing: -0.115385px;
+                color: #FBFCFE;
+                text-decoration: none;
+                border: 1px solid #FBFCFE;
+                border-radius: 24px;
+            }
+            .about-link:active {
+                color: #1B262F;
+                background: #FFFFFF;
+            }
+        }
+        .about-images {
+            width: 536px;
+            height: 103px;
+            .about-img {
+                margin-right: 62px;
+            }
+            .browser {
+                margin-bottom: 54px;
+            }
+        }
+    }
+}

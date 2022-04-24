@@ -1,6 +1,6 @@
 .header {
     padding-bottom: 75px;
-    z-index: 6;
+    z-index: 8;
     &-img {
         background: url(../../images/header-desktop-background.png) no-repeat;
         background-position: right;
@@ -8,8 +8,10 @@
         width: 780px;
         height: 780px;
         position: absolute;
-        top: -5%;
-        right: 0;
+        top: -30%;
+        right: -7%;
+        position: fixed;
+        opacity: 0.8;
     }
     .navbar  {
         padding-top: 30px;
@@ -20,8 +22,7 @@
         top: 0;
         right: 0;
         left: 0;
-        background: #EDF3F8;
-        z-index: -1;
+        z-index: 10;
         filter: drop-shadow(2px 4px 6px rgba(129, 127, 127, 0.812));
     }
     &-logo {
@@ -44,17 +45,21 @@
                 text-decoration: none;
                 opacity: 0.7;
                 cursor: pointer;
-                &:active {
-                    color: #36536B;
-                    opacity: 1;
-                }
+            }
+            .list-link:active {
+                color: #36536B;
+                opacity: 1;
             }
         }
+    }
+    .menu {
+        display: none;
     }
     .nav-btn {
         padding: 15px 25px;
         margin-left: auto;
         box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        cursor: pointer;
     }
     .hero {
         padding-top: 120px;
@@ -122,16 +127,17 @@
 @media screen and (max-width: 768px) and (min-width: 376px) {
     .header {
         padding-bottom: 50px;
+        z-index: 8;
         .navbar {
             filter: unset;
-            z-index: 10;
+            z-index: 12;
         }
         &-img {
             background: url(../../images/header-media-background.png) no-repeat;
             background-position: center;
             background-size: contain;
             position: fixed;
-            z-index: 10;
+            z-index: 8;
             top: -245px;
         }
         &-iphone {
@@ -161,6 +167,9 @@
 
 @media screen and (max-width: 375px) {
     .header {
+        background: url(../../images/header-media-background.png) no-repeat;
+        background-position: top;
+        background-size: auto;
         &-img {
             display: none;
         }
@@ -169,26 +178,33 @@
             .menu {
                 width: 28px;
                 height: 18px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                margin-left: auto;
                 position: relative;
-                .toggle {
-                    margin: auto;
-                }
                 .toggle, .toggle::after, .toggle::before {
                     content: "";
                     width: 28px;
                     height: 3px;
                     border-radius: 3px;
-                    position: absolute;
                     background: #36536B;
+                    position: absolute;
                 }
                 .toggle::before {
-                    top: 0;
+                    top: 8px;
                 }
                 .toggle::after {
-                    bottom: 0;
+                    bottom: 8px;
+                }
+            }
+            .toggle--active {
+                display: flex;
+                align-items: center;
+                .toggle::before {
+                    transform: translateY(5%) rotate(50%);
+                }
+            }
+            .toggle--active {
+                .toggle::after {
+                    transform: translateY(-5px) rotate(-50%);
                 }
             }
         }
@@ -226,7 +242,7 @@
                 }
             }
             .hero-right {
-                transform: translate(10%, 20%);
+                transform: translate(10%, 18%);
             }
         }
     }

@@ -435,7 +435,7 @@ body {
 
 .header {
   padding-bottom: 75px;
-  z-index: 6;
+  z-index: 8;
 }
 
 .header-img {
@@ -445,8 +445,10 @@ body {
   width: 780px;
   height: 780px;
   position: absolute;
-  top: -5%;
-  right: 0;
+  top: -30%;
+  right: -7%;
+  position: fixed;
+  opacity: 0.8;
 }
 
 .header .navbar {
@@ -462,8 +464,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  background: #EDF3F8;
-  z-index: -1;
+  z-index: 10;
   -webkit-filter: drop-shadow(2px 4px 6px rgba(129, 127, 127, 0.812));
           filter: drop-shadow(2px 4px 6px rgba(129, 127, 127, 0.812));
 }
@@ -504,11 +505,16 @@ body {
   opacity: 1;
 }
 
+.header .menu {
+  display: none;
+}
+
 .header .nav-btn {
   padding: 15px 25px;
   margin-left: auto;
   -webkit-box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
           box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  cursor: pointer;
 }
 
 .header .hero {
@@ -593,18 +599,19 @@ body {
 @media screen and (max-width: 768px) and (min-width: 376px) {
   .header {
     padding-bottom: 50px;
+    z-index: 8;
   }
   .header .navbar {
     -webkit-filter: unset;
             filter: unset;
-    z-index: 10;
+    z-index: 12;
   }
   .header-img {
     background: url(../../images/header-media-background.png) no-repeat;
     background-position: center;
     background-size: contain;
     position: fixed;
-    z-index: 10;
+    z-index: 8;
     top: -245px;
   }
   .header-iphone {
@@ -638,6 +645,11 @@ body {
 }
 
 @media screen and (max-width: 375px) {
+  .header {
+    background: url(../../images/header-media-background.png) no-repeat;
+    background-position: top;
+    background-size: auto;
+  }
   .header-img {
     display: none;
   }
@@ -647,34 +659,38 @@ body {
   .header .navbar .menu {
     width: 28px;
     height: 18px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin-left: auto;
     position: relative;
-  }
-  .header .navbar .menu .toggle {
-    margin: auto;
   }
   .header .navbar .menu .toggle, .header .navbar .menu .toggle::after, .header .navbar .menu .toggle::before {
     content: "";
     width: 28px;
     height: 3px;
     border-radius: 3px;
-    position: absolute;
     background: #36536B;
+    position: absolute;
   }
   .header .navbar .menu .toggle::before {
-    top: 0;
+    top: 8px;
   }
   .header .navbar .menu .toggle::after {
-    bottom: 0;
+    bottom: 8px;
+  }
+  .header .navbar .toggle--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .navbar .toggle--active .toggle::before {
+    -webkit-transform: translateY(5%) rotate(50%);
+            transform: translateY(5%) rotate(50%);
+  }
+  .header .navbar .toggle--active .toggle::after {
+    -webkit-transform: translateY(-5px) rotate(-50%);
+            transform: translateY(-5px) rotate(-50%);
   }
   .header .nav-list, .header .nav-btn {
     display: none;
@@ -720,8 +736,8 @@ body {
             transform: unset;
   }
   .header .hero .hero-right {
-    -webkit-transform: translate(10%, 20%);
-            transform: translate(10%, 20%);
+    -webkit-transform: translate(10%, 18%);
+            transform: translate(10%, 18%);
   }
 }
 
@@ -826,6 +842,10 @@ body {
     padding-bottom: 80px;
     margin-top: 40px;
     margin-bottom: 40px;
+    background: url(../../images/about-media-1x.png) no-repeat;
+    background-position: top;
+    background-size: contain;
+    background: #1B262F;
   }
   .about-pavigation {
     -webkit-box-orient: vertical;
@@ -939,8 +959,9 @@ body {
             flex-direction: column;
   }
   .implement-img {
-    width: 330px;
+    width: 100%;
     height: 210px;
+    margin-left: 15%;
   }
   .implement-right {
     text-align: center;
@@ -1265,6 +1286,9 @@ body {
   padding-top: 31px;
   padding-bottom: 31px;
   margin-top: 50px;
+  background: url(../../images/footer-tablet-background.png) no-repeat;
+  background-position: bottom right;
+  background-size: contain;
   background: #1B262F;
 }
 
@@ -1339,10 +1363,14 @@ body {
   color: #DA6D97;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) and (min-width: 300px) {
   .footer {
     padding-top: 40px;
     padding-bottom: 40px;
+    background: url(../../images/footer-mobile-background.png) no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background: #1B262F;
   }
   .footer-pavigation {
     -webkit-box-orient: vertical;

@@ -2,6 +2,9 @@
     padding-top: 31px;
     padding-bottom: 31px;
     margin-top: 50px;
+    background: url(../../images/footer-tablet-background.png) no-repeat;
+    background-position: bottom right;
+    background-size: contain;
     background: #1B262F;
     &-pavigation {
         display: flex;
@@ -52,10 +55,14 @@
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) and (min-width: 300px) {
     .footer {
         padding-top: 40px;
         padding-bottom: 40px;
+        background: url(../../images/footer-mobile-background.png) no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        background: #1B262F;
         &-pavigation {
             flex-direction: column;
             justify-content: center;

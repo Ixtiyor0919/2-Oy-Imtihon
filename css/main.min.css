@@ -427,7 +427,7 @@ body {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) and (min-width: 350px) {
   .container {
     padding: 0 24px;
   }
@@ -446,8 +446,7 @@ body {
   height: 780px;
   position: absolute;
   top: -30%;
-  right: -7%;
-  position: fixed;
+  right: -0;
   opacity: 0.8;
 }
 
@@ -506,6 +505,10 @@ body {
 }
 
 .header .menu {
+  display: none;
+}
+
+.header .menu-line {
   display: none;
 }
 
@@ -592,8 +595,8 @@ body {
 }
 
 .header .hero .hero-right {
-  -webkit-transform: translate(15%, 40%);
-          transform: translate(15%, 40%);
+  -webkit-transform: translate(10%, 23%);
+          transform: translate(10%, 23%);
 }
 
 @media screen and (max-width: 768px) and (min-width: 650px) {
@@ -655,6 +658,7 @@ body {
   }
   .header .navbar {
     z-index: 10;
+    position: relative;
   }
   .header .navbar .menu {
     width: 28px;
@@ -662,13 +666,14 @@ body {
     margin-left: auto;
     position: relative;
   }
-  .header .navbar .menu .toggle, .header .navbar .menu .toggle::after, .header .navbar .menu .toggle::before {
+  .header .navbar .menu .toggle {
     content: "";
     width: 28px;
     height: 3px;
     border-radius: 3px;
     background: #36536B;
     position: absolute;
+    z-index: 6;
   }
   .header .navbar .menu .toggle::before {
     top: 8px;
@@ -684,13 +689,59 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header .navbar .toggle--active .toggle::before {
-    -webkit-transform: translateY(5%) rotate(50%);
-            transform: translateY(5%) rotate(50%);
+  .header .navbar .toggle--active .toggle:nth-child(1n) {
+    background: #f6f6f6;
+    -webkit-transform: translateY(6px) rotate(45deg);
+            transform: translateY(6px) rotate(45deg);
   }
-  .header .navbar .toggle--active .toggle::after {
-    -webkit-transform: translateY(-5px) rotate(-50%);
-            transform: translateY(-5px) rotate(-50%);
+  .header .navbar .toggle--active .toggle:nth-child(2n) {
+    opacity: 0;
+  }
+  .header .navbar .toggle--active .toggle:nth-child(3n) {
+    background: #f6f6f6;
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+  }
+  .header .navbar .toggle--active ~ .nav-list {
+    display: block;
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    left: 20%;
+    top: 0px;
+    padding-top: 30%;
+    padding-left: 25%;
+    background: #1B262F;
+    z-index: 2;
+    opacity: 0.6;
+    -webkit-box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+            box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  }
+  .header .navbar .toggle--active ~ .nav-list > .list-item {
+    padding: 32px;
+  }
+  .header .navbar .toggle--active ~ .nav-btn {
+    display: block;
+    z-index: 4;
+    width: 260px;
+    position: absolute;
+    left: 140px;
+    bottom: -336px;
+  }
+  .header .navbar .toggle--active ~ .nav-list > .list-item > .list-link {
+    font-size: 20px;
+    line-height: 24px;
+    color: #FBFCFE;
+  }
+  .header .navbar .toggle--active ~ .menu-line {
+    display: block;
+    width: 250px;
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    height: 2px;
+    background: #f5f6f8;
+    opacity: 0.5;
   }
   .header .nav-list, .header .nav-btn {
     display: none;
@@ -982,7 +1033,7 @@ body {
   -ms-flex-line-pack: justify;
       align-content: space-between;
   background: url(../../images/payment-background.png) no-repeat;
-  background-position: right;
+  background-position: top right;
   background-size: auto;
 }
 

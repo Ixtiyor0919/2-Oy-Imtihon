@@ -421,7 +421,7 @@ body {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
+@media screen and (max-width: 768px) and (min-width: 650px) {
   .container {
     padding: 0 40px;
   }
@@ -596,7 +596,7 @@ body {
           transform: translate(15%, 40%);
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
+@media screen and (max-width: 768px) and (min-width: 650px) {
   .header {
     padding-bottom: 50px;
     z-index: 8;
@@ -818,7 +818,7 @@ body {
   margin-bottom: 54px;
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
+@media screen and (max-width: 768px) and (min-width: 650px) {
   .about {
     padding-top: 88px;
     padding-bottom: 88px;
@@ -934,7 +934,7 @@ body {
   color: #6C8294;
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
+@media screen and (max-width: 768px) and (min-width: 650px) {
   .implement {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1106,7 +1106,7 @@ body {
   background-size: contain;
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
+@media screen and (max-width: 768px) and (min-width: 650px) {
   .payment {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1234,7 +1234,7 @@ body {
           transform: translateY(-48px);
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
+@media screen and (max-width: 768px) and (min-width: 650px) {
   .begin {
     padding-top: 50px;
     padding-bottom: 50px;

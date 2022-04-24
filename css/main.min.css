@@ -767,6 +767,7 @@ body {
   }
   .header .hero-left {
     text-align: center;
+    margin-top: -100px;
   }
   .header .hero-left .hero-title {
     width: 100%;
@@ -787,8 +788,8 @@ body {
             transform: unset;
   }
   .header .hero .hero-right {
-    -webkit-transform: translate(10%, 18%);
-            transform: translate(10%, 18%);
+    -webkit-transform: translate(10%, -3%);
+            transform: translate(10%, -3%);
   }
 }
 

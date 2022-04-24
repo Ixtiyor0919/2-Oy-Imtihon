@@ -270,6 +270,7 @@
             overflow: hidden;
             &-left {
                 text-align: center;
+                margin-top: -100px;
                 .hero-title {
                     width: 100%;
                     font-size: 32px;
@@ -289,7 +290,7 @@
                 }
             }
             .hero-right {
-                transform: translate(10%, 18%);
+                transform: translate(10%, -3%);
             }
         }
     }

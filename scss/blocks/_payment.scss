@@ -3,7 +3,7 @@
     padding-bottom: 50px;
     align-content: space-between;
     background: url(../../images/payment-background.png) no-repeat;
-    background-position: top right;
+    background-position: right;
     background-size: auto;
     &-top {
         display: flex;
@@ -149,10 +149,14 @@
                 }
             }
             .payment-right {
-                width: 100%;
-                .payment-top-img {
-                    margin-right: -65px;
+                width: 315px;
+                .payment-top-first {
+                    margin-left: -20px;
                     height: 320px;
+                }
+                .payment-top-second {
+                    width: 200px;
+                    margin-left: -40px;
                 }
             }
         }

@@ -961,7 +961,7 @@ body {
   .implement-img {
     width: 100%;
     height: 210px;
-    margin-left: 15%;
+    margin-left: 12%;
   }
   .implement-right {
     text-align: center;
@@ -982,7 +982,7 @@ body {
   -ms-flex-line-pack: justify;
       align-content: space-between;
   background: url(../../images/payment-background.png) no-repeat;
-  background-position: top right;
+  background-position: right;
   background-size: auto;
 }
 
@@ -1159,11 +1159,15 @@ body {
     line-height: 28px;
   }
   .payment-top .payment-right {
-    width: 100%;
+    width: 315px;
   }
-  .payment-top .payment-right .payment-top-img {
-    margin-right: -65px;
+  .payment-top .payment-right .payment-top-first {
+    margin-left: -20px;
     height: 320px;
+  }
+  .payment-top .payment-right .payment-top-second {
+    width: 200px;
+    margin-left: -40px;
   }
   .payment-bottom {
     -webkit-box-orient: vertical;

@@ -179,24 +179,24 @@
             z-index: 10;
             position: relative;
             .menu {
-                width: 28px;
-                height: 18px;
+                width: 20px;
+                height: 20px;
                 margin-left: auto;
                 position: relative;
+                display: unset;
                 .toggle {
-                    content: "";
-                    width: 28px;
+                    width: 20px;
                     height: 3px;
                     border-radius: 3px;
                     background: #36536B;
                     position: absolute;
                     z-index: 6;
                 }
-                .toggle::before {
-                    top: 8px;
+                .toggle:nth-child(2n) {
+                    margin: 18px 0;
                 }
-                .toggle::after {
-                    bottom: 8px;
+                .toggle:nth-child(3n) {
+                    margin-top: 8px;
                 }
             }
             .toggle--active {
@@ -211,6 +211,7 @@
                 }
                 .toggle:nth-child(3n) {
                     background: #f6f6f6;
+                    margin: unset;
                     transform: translateY(6px) rotate(-45deg);
                 }
             }

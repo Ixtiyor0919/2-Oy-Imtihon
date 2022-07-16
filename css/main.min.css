@@ -688,6 +688,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: fixed;
+    top: 5%;
+    left: 90%;
+    z-index: 99;
   }
   .header .navbar .toggle--active .toggle:nth-child(1n) {
     background: #f6f6f6;

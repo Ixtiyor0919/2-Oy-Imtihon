@@ -202,6 +202,10 @@
             .toggle--active {
                 display: flex;
                 align-items: center;
+                position: fixed;
+                top: 5%;
+                left: 90%;
+                z-index: 99;
                 .toggle:nth-child(1n) {
                     background: #f6f6f6;
                     transform: translateY(6px) rotate(45deg);
